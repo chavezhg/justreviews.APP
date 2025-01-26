@@ -1,0 +1,28 @@
+{% schema %}
+  {
+    "name": "JustReviews Script",
+    "target": "body",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_reviews",
+        "label": "JustReviews",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+    // Pasar el valor desde Liquid a una variable de JavaScript
+    var just_reviews_enabled = {{ block.settings.enable_reviews | json }};
+
+    // Convertir explícitamente a booleano en caso de que el valor sea una cadena
+    just_reviews_enabled = Boolean(just_reviews_enabled);
+
+    console.log("Checkbox value (just_reviews_enabled):", just_reviews_enabled);
+
+    if (just_reviews_enabled) {
+        console.log("Widget is enabled. Loading script...");
+    }
+</script>

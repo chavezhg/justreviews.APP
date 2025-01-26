@@ -1,0 +1,174 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.discountBanner {
+    background-color: #ffdd57;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header {
+    background-color: #ffeceb;
+    color: #4c4c6d;
+    text-align: center;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #4c4c6d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #3b3b54;
+}
+
+.cardsContainer {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.checklist, .promoCard {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.checklist, .promoCard {
+    flex: 1;
+    min-width: 250px;
+}
+
+.stats {
+    flex: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.statItem {
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.promoCard {
+    text-align: center;
+}
+
+.promoCard img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Checklist Styles */
+.checklist ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.checklist ul li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.checklist ul li.completed {
+    background-color: #e8f5e9;
+    border-color: #28a745;
+}
+
+.checklist ul li.completed span.icon {
+    color: #28a745;
+}
+
+.checklist ul li.incomplete {
+    cursor: pointer;
+    background-color: #ffffff;
+    border-color: #ddd;
+}
+
+.checklist ul li.incomplete:hover {
+    background-color: #f0f8ff;
+    border-color: #007bff;
+}
+
+.checklist ul li span.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    border-radius: 50%;
+}
+
+.checklist ul li.completed span.icon {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.checklist ul li.incomplete span.icon {
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+.checklist ul li.incomplete span.text {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.checklist ul li.incomplete .arrow {
+    margin-left: auto;
+    font-size: 16px;
+    color: #007bff;
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .checklist {
+        margin-right: 20px;
+    }
+}

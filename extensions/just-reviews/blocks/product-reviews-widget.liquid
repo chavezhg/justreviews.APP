@@ -1,0 +1,22 @@
+{% schema %}
+{
+  "name": "Review Widget",
+  "target": "section",
+  "settings": [
+    { "type": "color", "id": "colour", "label": "Star Colour", "default": "#ff0000" }
+  ]
+}
+{% endschema %}
+
+<h1>shop.metafields.JustReviews.enabled_app {{ shop.metafields.JustReviews.enabled_app }}</h1>
+
+{% if shop.metafields.JustReviews.enabled_app %}
+  <div class="review-widget-container">
+    <h2>Customer Reviews</h2>
+    <div id="review-widget">
+      <!-- Widget Content -->
+    </div>
+  </div>
+{% else %}
+  <p>Reviews are disabled. Enable the JustReviews app to use this widget.</p>
+{% endif %}
